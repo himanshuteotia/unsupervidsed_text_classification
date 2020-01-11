@@ -1,6 +1,6 @@
-# unsupervidsed_text_classification
 
-#1. Preprocessing :
+
+# 1. Preprocessing :
 
 First, the html tags and special characters in the
 collected documents are removed. And then, the
@@ -8,7 +8,7 @@ contents of the documents are segmented into
 sentences. 
 
 
-#2. Creating training sentence sets :
+# 2. Creating training sentence sets :
 
 Because the proposed system does not have
 training documents, training sentence sets for
@@ -34,7 +34,7 @@ This assignment has been done through
 measuring similarities of the unclassified
 sentences to the representative sentences. 
 
-#3. Extracting and verifying representative
+# 3. Extracting and verifying representative
 sentences :
 
 We define the representative sentence as what
@@ -68,3 +68,21 @@ Frequency (TF) and Inverse Category Frequency
     >> The combination (TFICF) of the above ①
         and ②, i.e., weight wij of word ti in jth
         category is computed as follows:
+         (3)
+       $Wij = TFij * ICFi$
+           $= TFij *  (log(M) - log(CFi))$
+
+
+> Using word weights (wij) computed in 1), a
+sentence weight (Wij) in jth category are
+computed as follows:
+wij = w1j + w2j + .... wij / N
+where N is the total number of words in a
+sentence.
+
+> The representative sentences of each category
+are sorted in the decreasing order of weight,
+which was computed in 2). And then, the top
+70% of the representative sentences are selected
+and used in our experiment. It is decided
+empirically.
