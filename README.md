@@ -86,3 +86,6 @@ which was computed in 2). And then, the top
 70% of the representative sentences are selected
 and used in our experiment. It is decided
 empirically.
+
+
+https://www.aclweb.org/anthology/C00-1066.pdf
